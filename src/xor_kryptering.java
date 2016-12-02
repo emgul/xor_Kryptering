@@ -1,10 +1,17 @@
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
+
 import java.util.*;
 public class xor_kryptering {
 
     public static void main(String[] args) {
 
-        int one = 1;
-        int two = 1;
+
+        Scanner tgb = new Scanner(System.in);
+
+        System.out.print("tal 1 = ");
+        int one = tgb.nextInt();
+        System.out.print("tal 2 = ");
+        int two = tgb.nextInt();
 
         int three = (int) (one ^ two);
 

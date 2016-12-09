@@ -1,28 +1,19 @@
-import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
+import java.io.*;
 
-import java.util.*;
 public class xor_kryptering {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        String fil = "minfil.txt";
 
-        Scanner tgb = new Scanner(System.in);
+        FileReader fr = new FileReader(fil);
+        BufferedReader infil = new BufferedReader(fr);
 
-        System.out.print("tal 1 = ");
-        int one = tgb.nextInt();
-        System.out.print("tal 2 = ");
-        int two = tgb.nextInt();
+        String rad = infil.readLine();
+        
 
-        int three = (int) (one ^ two);
-
-        System.out.println("Decimal," + three);
-        System.out.println("binary, " + Integer.toBinaryString(three));
-
-        int four = (int) (three ^ one);
-
-        System.out.println("Decimal," + four);
-        System.out.println("binary, " + Integer.toBinaryString(four));
 
 
     }
+
 }
